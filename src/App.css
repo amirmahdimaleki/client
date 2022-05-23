@@ -65,17 +65,17 @@ form button:hover {
   flex: 1;
 }
 
-.trash-btn,
-.complete-btn {
-  background: #0c01a7;
+.delete-btn,
+.done-btn {
+  background: #e93029;
   color: white;
   border: none;
   padding: 1rem;
   cursor: pointer;
   font-size: 1rem;
 }
-.complete-btn {
-  background: rgb(67, 233, 122);
+.done-btn {
+  background: rgb(40, 184, 88);
 }
 .todo-item {
   padding: 0rem 0.5rem;
@@ -91,7 +91,7 @@ form button:hover {
   opacity: 0;
 }
 
-.completed {
+.done {
   text-decoration: line-through;
   opacity: 0.5;
 }

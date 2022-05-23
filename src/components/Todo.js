@@ -1,16 +1,23 @@
 import React from "react";
 
 
-const Todo = () => {
-   return(
-    <div className="todo"> af
-        <li className="todoItem"></li>
+const Todo = ({text, completed, id, todos, setTodos, todo }) => {
+    const deleteHandler = () => {
+        // todo *********************** will be changed in backend section ************************
+      setTodos(todos.filter(el=> el.id !== todo.id))
+    };
+    const doneHandler = () => {
 
-        <button className="done-btn">
+    };
+   return(
+    <div className="todo">
+        <li className="todoItem">{text}</li>
+
+        <button onClick={doneHandler} className="done-btn">
             <i className="fas fa-check"></i>
             </button>
 
-        <button className="delete-btn">
+        <button onClick={deleteHandler} className="delete-btn">
             <i className="fas fa-trash"></i>
             </button>
     </div>
