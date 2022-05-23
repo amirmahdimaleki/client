@@ -1,17 +1,29 @@
 import React from "react";
 
 
-const Todo = ({text, completed, id, todos, setTodos, todo }) => {
+const Todo = ({text,  todos, setTodos, todo }) => {
     const deleteHandler = () => {
+
         // todo *********************** will be changed in backend section ************************
-      setTodos(todos.filter(el=> el.id !== todo.id))
-    };
+           setTodos(todos.filter(el=> el.id !== todo.id))
+    }; 
+
+
     const doneHandler = () => {
 
-    };
+         setTodos(
+             todos.map((item) => {
+               if(item.id === todo.id){
+                 return {...item, completed : !item.completed}
+                }    
+                  return item;  
+             })
+           ) 
+        };
+
    return(
     <div className="todo">
-        <li className="todoItem">{text}</li>
+        <li className={`todoItem ${todo.completed ? "completed" : ""}`}>{text}</li>
 
         <button onClick={doneHandler} className="done-btn">
             <i className="fas fa-check"></i>

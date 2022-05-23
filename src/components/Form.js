@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-const Form =({input, setInput, todo, setTodo}) =>{
+const Form =({input, setInput, todos, setTodos}) =>{
 
     const inputTextHandler = (e)=>{
            setInput(e.target.value);
@@ -9,7 +9,7 @@ const Form =({input, setInput, todo, setTodo}) =>{
 
     const submitTodoHandler = (e) =>{
         e.preventDefault();
-        setTodo([...todo, 
+        setTodos([...todos, 
  // todo $$$$$$$$$$$$$$$$$$$$$$ id might change in backend section $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
          {text:input, completed: false, id: Math.random()*1000}
         ]);
@@ -23,13 +23,13 @@ const Form =({input, setInput, todo, setTodo}) =>{
         <button onClick={submitTodoHandler} className="todo-button" type="submit">
           <i className="fas fa-plus-square"></i>
         </button>
-        <div className="select">
+        {/* <div className="select">
           <select name="todos" className="filter-todo">
             <option value="all">All</option>
             <option value="completed">Completed</option>
             <option value="uncompleted">Uncompleted</option>
           </select>
-        </div>
+        </div> */}
       </form>
     );
 };
