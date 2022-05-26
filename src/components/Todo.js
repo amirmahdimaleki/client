@@ -1,11 +1,17 @@
 import React from "react";
+import {deleteTodo} from "../api/todoApi"
+// import { useNavigate } from "react-router-dom";
 
 
 const Todo = ({text,  todos, setTodos, todo }) => {
-    const deleteHandler = () => {
+      // const navigate = useNavigate();
+
+      const deleteHandler = (id) => {
 
         // todo *********************** will be changed in backend section ************************
            setTodos(todos.filter(el=> el.id !== todo.id))
+           deleteTodo(id);
+          //  navigate(0);
     }; 
 
 
@@ -29,7 +35,7 @@ const Todo = ({text,  todos, setTodos, todo }) => {
             <i className="fas fa-check"></i>
             </button>
 
-        <button onClick={deleteHandler} className="delete-btn">
+        <button onClick={()=> deleteHandler(todo.id)} className="delete-btn">
             <i className="fas fa-trash"></i>
             </button>
     </div>
