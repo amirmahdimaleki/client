@@ -1,5 +1,5 @@
 import React from 'react'
-
+import {createTodo} from "../api/todoApi"
 
 const Form =({input, setInput, todos, setTodos}) =>{
 
@@ -14,6 +14,8 @@ const Form =({input, setInput, todos, setTodos}) =>{
          {text:input, completed: false, id: Math.random()*1000}
         ]);
         setInput('');
+        // maybe its input!
+        createTodo(todos)
     };
   
 

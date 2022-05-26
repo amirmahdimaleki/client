@@ -1,7 +1,9 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import './App.css';
 import Form from './components/Form';
 import TodoList from './components/TodoList';
+import { getTheList } from "./api/todoApi";
+
 
 
 
@@ -15,6 +17,12 @@ function App() {
   // for editing the list of todos
   const [editing, setEditiong]= useState(false);
 
+  useEffect(()=>{
+
+    getTheList().then(({data})=>setTodos(data.todos))
+  }, [])
+  
+   
   return (
     <div className="App">
     <header>List your Todo's</header>
