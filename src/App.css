@@ -40,6 +40,39 @@ form button:hover {
   background: #228ee7;
   color: white;
 }
+nav{
+  overflow: hidden;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  flex-direction: row;
+  bottom: 0;
+  width: 90%;
+  margin-left:60px;
+  background: rgba( 76, 165, 223, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 18.5px );
+-webkit-backdrop-filter: blur( 18.5px );
+border-radius: 30px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+nav li {
+  /* float: left;
+  display: block; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  flex-direction: row;
+  color: #f2f2f2;
+  /* text-align: center; */
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
 .todo-container {
   display: flex;
   justify-content: center;
