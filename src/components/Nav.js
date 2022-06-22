@@ -33,12 +33,11 @@ const Nav = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/members">
-            {({ isActive }) => (
-              <span style={isActive ? activeStyle : notActiveStyle}>
-               Members
-              </span>
-            )}
+          <NavLink
+              to="/members"
+              style={({ isActive }) => (isActive ? activeStyle : notActiveStyle)}
+              >
+                Members
           </NavLink>
         </li>
       </ul>
