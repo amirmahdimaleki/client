@@ -15,7 +15,7 @@ header {
 
 header,
 form {
-  min-height: 20vh;
+  min-height: 40vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,23 +23,50 @@ form {
 form input,
 form button {
   padding: 0.5rem;
-  font-size: 2rem;
+  font-size: 1rem;
   border: none;
   background: white;
   border-radius: 18px;
   margin-right: 10px;
 }
-form button {
-  color:  #228ee7;
-  background: #f7fffe;
+.submit-btn{
+  background:  #0bc45ee5;
+  color: #f7fffe;
   cursor: pointer;
   transition: all 0.3s ease;
   border-radius: 16px;
 }
-form button:hover {
-  background: #228ee7;
+.submit-btn:hover {
+  background: #0ef375f5;
   color: white;
 }
+
+.member-form button:hover{
+  background: #83a0ff;
+  max-height: 30px;
+}
+
+.member-form{
+ position: relative;
+ bottom: 190px;
+}
+
+.close-btn{
+  position: relative;
+  left: 250px;
+  bottom: 450px;
+  color: #f7fffe;
+  background: #ee3a3ae0 ;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 40%;
+}
+
+.close-btn:hover{
+  color: #f7fffe;
+  background: #f55252e5 ;
+}
+
 nav{
   overflow: hidden;
   position: fixed;
@@ -183,3 +210,32 @@ select {
   transform: scale(1.5);
 }
 */
+
+.members-div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.members-form{
+  display: grid;
+  align-items: center; 
+  justify-content: center; 
+  justify-items: center;
+  background: rgba(74, 91, 243, 0.911);
+  
+}
+
+.members-form input{
+  padding: 10px;
+  margin: 13px;
+  font-size: 18px;
+  border: none;
+  border-radius: 18px;
+}
+
+.skill,.language{
+  display:flex;
+  margin-top:10px;
+}
+

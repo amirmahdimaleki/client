@@ -22,7 +22,7 @@ const Form =({input, setInput, todos, setTodos}) =>{
     return(
       <>
       <header>List your Todo's</header>
-      <form>
+      <form className='member-form'>
         <input value ={input} onChange={inputTextHandler} type="text" className="todo-input" />
         <button onClick={submitTodoHandler} className="todo-button" type="submit">
           <i className="fas fa-plus-square"></i>
